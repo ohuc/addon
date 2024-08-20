@@ -25,7 +25,7 @@ class oauth2Site(object):
 
         self.oauth2 = OAuth2Session(
             self.user_data['client_id'],
-            redirect_uri='urn:ietf:wg:oauth:2.0:oob',
+            redirect_uri='https://my.home-assistant.io/redirect/oaut',
             scope="https://www.googleapis.com/auth/assistant-sdk-prototype"
         )
 
