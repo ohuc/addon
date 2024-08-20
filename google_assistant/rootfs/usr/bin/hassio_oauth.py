@@ -25,10 +25,9 @@ class oauth2Site(object):
 
         self.oauth2 = OAuth2Session(
             self.user_data['client_id'],
-            redirect_uri='https://my.home-assistant.io/redirect/oaut',
+            redirect_uri='http://localhost:9324',  # Change this line
             scope="https://www.googleapis.com/auth/assistant-sdk-prototype"
         )
-
         self.auth_url, _ = self.oauth2.authorization_url(self.user_data['auth_uri'], access_type='offline', prompt='consent')
 
     @cherrypy.expose
